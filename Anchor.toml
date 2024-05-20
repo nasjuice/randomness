@@ -1,0 +1,39 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.localnet]
+randomness = "5cJ9ib6ja2nsmuwGLNn9Kv3wk2R42S24gbnDsRrN3Abr"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/Users/naasirjusab/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test.validator]
+url = "https://api.devnet.solana.com"
+
+[[test.validator.clone]] # sb devnet oracle programID
+address = "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f"
+
+[[test.validator.clone]] # sb devnet oracle IDL
+address = "Fi8vncGpNKbq62gPo56G4toCehWNy77GgqGkTaAF5Lkk"
+
+[[test.validator.clone]] # sb devnet oracle SbState
+address = "CyZuD7RPDcrqCGbNvLCyqk6Py9cEZTKmNKujfPi3ynDd"
+
+[[test.validator.clone]] # sb devnet oracle tokenVault
+address = "7hkp1xfPBcD2t1vZMoWWQPzipHVcXeLAAaiGXdPSfDie"
+
+[[test.validator.clone]] # sb devnet attestation programID
+address = "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx"
+
+[[test.validator.clone]] # sb devnet attestation IDL
+address = "5ExuoQR69trmKQfB95fDsUGsUrrChbGq9PFgt8qouncz"
+
+[[test.validator.clone]] # sb devnet programState
+address = "5MFs7RGTjLi1wtKNBFRtuLipCkkjs4YQwRRU9sjnbQbS"
